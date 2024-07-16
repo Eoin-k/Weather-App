@@ -1,0 +1,27 @@
+.card-background{
+    background-color: rgba(0, 0, 0, 0.311);
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.heading-text{
+
+}
+
+.condition-text{
+
+}
+
+.temp-number{
+
+}
+
+.number-medium{
+    
+}

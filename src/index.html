@@ -6,6 +6,35 @@
     <title>Eoins Weather App</title>
 </head>
 <body>
-    
+    <section class="main-outer-wrapper">
+        <div class="header-wrapper">
+            <div class="info-wrapper">
+                <div class="location-wrapper">
+                    <i><img src="" alt="" id="marker"></i>
+                    <p id="locationName"></p>
+                </div>
+                <div id="main-info" class="main-info"></div>
+            </div>
+            <div id class="icon-wrapper">
+                <input type="checkbox" id="tempBtn"></input>
+                <input type="checkbox" id="unitBtn"></input>
+                <form action="">
+                    <label for="location">
+                        Location:
+                        <input name="location" id="location" type="text">
+                    </label>
+                    <button id="search-btn">Search</button>
+                </form>
+                <img class="main-icon-large" id="main-icon-large" src="" alt="">
+            </div>
+        </div>
+        <div class="body">
+            <div id="first-card" class="card-background"></div>
+            <div id="second-card" class="card-background"></div>
+            <div id="third-card" class="card-background"></div>
+            <div id="hourly-card"  class="card-background"></div>
+            <div id="sidebar-card" class="card-background"></div>
+        </div>
+    </section>
 </body>
 </html>
