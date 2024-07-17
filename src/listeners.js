@@ -1,4 +1,4 @@
-import { sidebarCard, sliderWrapper } from "./rendering";
+import { sidebarCardInner, sliderWrapper } from "./rendering";
 
 export const sevenDayButtonListeners = () => {
 	const dailyBtnLeft = document.getElementById("daily-btn-left");
@@ -8,12 +8,12 @@ export const sevenDayButtonListeners = () => {
 	dailyBtnRight.textContent = ">";
 
 	dailyBtnLeft.addEventListener("click", (e) => {
-		sidebarCard.prepend(dailySlide[dailySlide.length - 1]);
+		sidebarCardInner.prepend(dailySlide[dailySlide.length - 1]);
 		e.stopPropagation();
 	});
 
 	dailyBtnRight.addEventListener("click", (e) => {
-		sidebarCard.append(dailySlide[0]);
+		sidebarCardInner.append(dailySlide[0]);
 		e.stopPropagation();
 	});
 };

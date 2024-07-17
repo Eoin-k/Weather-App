@@ -120,9 +120,13 @@ text-align: start;
     grid-area: 2/10/6/13;
     overflow: hidden;
     display: flex;
+    position: relative;
+}
+
+.sidebar-card-inner{
+    display: flex;
     flex-direction: row;
     gap: 2rem;
-    position: relative;
 }
 
 .sidebar-slide-item{

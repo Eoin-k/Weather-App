@@ -12,7 +12,7 @@ const bigIcon = document.getElementById("main-icon-large");
 const firstCard = document.getElementById("first-card");
 const secondCard = document.getElementById("second-card");
 const thirdCard = document.getElementById("third-card");
-export const sidebarCard = document.getElementById("sidebar-card");
+export const sidebarCardInner = document.getElementById("sidebar-card-inner");
 const mainInfo = document.getElementById("main-info");
 const tempBtn = document.getElementById("tempBtn");
 const unitBtn = document.getElementById("unitBtn");
@@ -125,13 +125,14 @@ export const renderHourlyCard = (data) => {
 };
 
 export const renderSevenDayWeather = (data) => {
+    sidebarCardInner.innerHTML = ""
 	const { forecast } = data;
 	let dayValues = forecast.forecastday;
 	for (let i = 1; i < dayValues.length; i++) {
 		let degreevalue = tempBtn.checked
 			? dayValues[i].day.maxtemp_f + `&#8457`
 			: dayValues[i].day.maxtemp_c + `&#8451`;
-		sidebarCard.innerHTML += `
+		sidebarCardInner.innerHTML += `
         <div class="sidebar-slide-item">
         <div class="daily-card-data">
         <div class="daily-card-header">
@@ -157,9 +158,9 @@ export const renderSevenDayWeather = (data) => {
         </div>
         `;
 	}
-	sevenDayButtonListeners();
 };
 hourlyListeners();
+sevenDayButtonListeners();
 
 tempBtn.addEventListener("click", (e) => {
 	getApi();
