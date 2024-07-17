@@ -2,10 +2,15 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: rgb(0 0 0 / 80%);
     border-radius: 2rem;
     color: white;
     padding: 2rem;
+    background: rgba(4, 4, 4, 0.482);
+    border-radius: 1em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.9px);
+    -webkit-backdrop-filter: blur(10.9px);
+    border: 1px solid rgba(4, 4, 4, 0.71);
 }
 *{
     margin: 0;
@@ -16,8 +21,16 @@ body {
     color: white;
     background-image: url(../src/images/background.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;   
+    font-family: 'Outfit','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+
+button{
+    cursor: pointer;
 }
 
 .main-outer-wrapper{
@@ -40,6 +53,10 @@ body {
 
 .card-icon{
     width: 2.5rem;
+}
+
+.card-text{
+    font-size: 2rem;
 }
 
 .heading-text{
@@ -81,7 +98,8 @@ text-align: start;
     flex-direction: column;
     gap: 1rem;
     padding-inline-end: 6rem;
-    padding-inline-start: 3rem;
+    padding-inline-start: 4rem;
+    padding-block: 1rem;
     position: relative;
     grid-area: 3/1/6/10;
     overflow: hidden;
@@ -101,6 +119,15 @@ text-align: start;
 #sidebar-card{
     grid-area: 2/10/6/13;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    position: relative;
+}
+
+.sidebar-slide-item{
+    min-width: 100%;
+    height: 100%;
 }
 
 form {
@@ -119,12 +146,16 @@ form {
 
 .header-wrapper{
     grid-area: 2/1/1/13;
-    background-color: rgb(0 0 0 / 80%);
     display: flex;
     gap: 1.5rem;
     padding: 3rem;
     justify-content: space-between;
-    border-radius: 2rem;
+    background: rgba(4, 4, 4, 0.482);
+    border-radius: 1em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.9px);
+    -webkit-backdrop-filter: blur(10.9px);
+    border: 1px solid rgba(4, 4, 4, 0.71);
 }
 
 .main-icon-large{
@@ -168,22 +199,51 @@ form {
     width: 8rem;
 }
 
+.daily-card-data{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+}
+
+.daily-card-header{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.daily-card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
 .slider-wrapper{
     display: flex;
-    gap: 1.5rem;
+    gap: 1.75rem;
     overflow: hidden;
 }
 
 .slide-item{
     display: flex;
     flex-direction: column;
+    padding: .25rem;
+    background: rgba(4, 4, 4, 0.779);
+    border-radius: 1em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.9px);
+    -webkit-backdrop-filter: blur(10.9px);
+    border: 1px solid rgba(4, 4, 4, 0.71);
+
 }
 
 .btn-right{
     position: absolute;
     font-size: 2.5rem;
-    right: 0;
-    top: 30%;
+    right: 1rem;
+    top: 50%;
     background-color: transparent;
     color: white;
     border: none;
@@ -192,8 +252,28 @@ form {
 
 .btn-left{
     position: absolute;
-    left: 0;
-    top: 30%;
+    left: 0.5rem;
+    top: 50%;
+    background-color: transparent;
+    color: white;
+    font-size: 2.5rem;
+    border:  none
+}
+
+.daily-btn-right{
+    position: absolute;
+    font-size: 2.5rem;
+    right: 1rem;
+    bottom: 5%;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.daily-btn-left{
+    position: absolute;
+    left: 1rem;
+    bottom: 5%;
     background-color: transparent;
     color: white;
     font-size: 2.5rem;
@@ -240,11 +320,11 @@ form {
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: rgb(52, 59, 216) ;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px rgb(52, 59, 216);
   }
   
   input:checked + .slider:before {
@@ -266,5 +346,7 @@ form {
     padding: 1em 1.5em;
     max-width: 150px;
     border-radius: .75em;
-    background-color: rgb(1, 120, 232);
+    background-color: rgb(52, 59, 216);
+    border: none;
+    color: white;
   }
