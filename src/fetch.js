@@ -1,4 +1,4 @@
-import { renderMainCards,renderHourlyCard } from "./rendering"
+import { renderMainCards,renderHourlyCard,renderSevenDayWeather } from "./rendering"
 
 const locationInput = document.getElementById("location")
 
@@ -10,6 +10,7 @@ const locationInput = document.getElementById("location")
         let data = await res.json()
         renderMainCards(data)
         renderHourlyCard(data)
+        renderSevenDayWeather(data)
     } catch(error) {
         alert(`We couldnt find ${location}, please try again`)
         locationInput.value = ""
