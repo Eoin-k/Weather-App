@@ -11,7 +11,6 @@ const bigIcon = document.getElementById("main-icon-large")
 const firstCard = document.getElementById("first-card")
 const secondCard = document.getElementById("second-card")
 const thirdCard = document.getElementById("third-card")
-const hourlyCard = document.getElementById("hourly-card-wrapper")
 const sidebarCard = document.getElementById("sidebar-card")
 const mainInfo = document.getElementById("main-info")
 const tempBtn = document.getElementById("tempBtn")
@@ -20,16 +19,8 @@ const sliderWrapper = document.getElementById("slider-wrapper")
 const slideBtnLeft = document.getElementById("button-left")
 const slideBtnRight = document.getElementById("button-right")
 let slide = document.getElementsByClassName("slide-item")
-console.log(slide)
-
-
-
-
 slideBtnLeft.textContent = "<"
 slideBtnRight.textContent = ">"
-
-
-
 
 export const renderMainCards = (data) => {
     
@@ -69,7 +60,6 @@ export const renderMainCards = (data) => {
     <span class="number-medium">${current.humidity} &#37</span>
     </div>
     `
-
     secondCard.innerHTML =""
 
     secondCard.innerHTML = `
@@ -108,9 +98,7 @@ export const renderMainCards = (data) => {
 
  export const renderHourlyCard = (data) => {
     const {forecast} = data
-    // forecast.forecastday[0].hour
     let hourValues = forecast.forecastday[0].hour
-    console.log(data)
 sliderWrapper.innerHTML = ""
     for (let i = 0; i<hourValues.length; i++){
         let degreevalue =  tempBtn.checked ? hourValues[i].heatindex_f + `&#8457` : hourValues[i].heatindex_c + `&#8451`;
@@ -148,7 +136,6 @@ sliderWrapper.innerHTML = ""
 
  slideBtnRight.addEventListener("click", (e) => {
     sliderWrapper.append(slide[0])
-    console.log("RIGHT ", slide)
     e.stopPropagation()
 
  })
@@ -156,7 +143,6 @@ sliderWrapper.innerHTML = ""
  slideBtnLeft.addEventListener("click", (e) => {
 
     sliderWrapper.prepend(slide[slide.length - 1]);
-    console.log("LEFT ", slide)
     e.stopPropagation()
  })
 
